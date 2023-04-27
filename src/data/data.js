@@ -26,5 +26,17 @@ const links = [
     },
 ];
 
+const images = [
+    // '../../public/images/home1_slide_one_bg.jpg',
+    // '../../public/images/home1_slide_2_bg.jpg',
+    {
+        url: '../../public/images/home1_slide_three_bg_2.jpg',
+        title: 'Brand New Arrivals',
+        secondTitle: 'New collection from new york',
+        button1: 'view all',
+        button2: 'lookbook'
+    }
+];
 
-export {links};
+
+export {links , images};
