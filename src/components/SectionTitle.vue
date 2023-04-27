@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container py-5">
         <div class="d-flex align-items-center justify-content-between">
             <hr>
             <h2 class="text-center fw-bolder fs-1">{{ title }}</h2>
