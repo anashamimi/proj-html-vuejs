@@ -35,3 +35,12 @@ ul{
 .cursor{
     cursor: pointer;
 }
+
+.active{
+    border-top: 3px solid var(--blue);
+    box-sizing: border-box;
+    li{
+       color: var(--blue); 
+    }
+    
+}

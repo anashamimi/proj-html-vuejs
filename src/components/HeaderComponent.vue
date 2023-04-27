@@ -40,7 +40,7 @@
         <section class="container d-flex align-items-center justify-content-between">
             <img src="../../public/images/classic_shop_logo1x.png" alt="logo">
             <div class="d-flex align-items-center gap-5">
-                <NavBar v-for="links in linkList" :link="links" />
+                <NavBar v-for="links in linkList" :link="links.link" :class="{'active': links.active}"/>
                 <button class="text-uppercase text-white rounded-5 fw-bold">shop now!</button>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>

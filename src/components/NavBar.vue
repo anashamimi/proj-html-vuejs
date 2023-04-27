@@ -11,8 +11,7 @@
 <script>
 export default {
     name: 'NavBar',
-    props: ['link', 'image'],
-
+    props: ['link'],
 }
 </script>
 
