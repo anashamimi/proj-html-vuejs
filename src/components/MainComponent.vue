@@ -1,24 +1,23 @@
 <template>
     <Carousel />
-    <SectionTitle :title="'Featured Products'" :subTitle="'Must have products from our top sellers'"/>
-    <Category/>
+    <SectionTitle :title="'Featured Products'" :subTitle="'Must have products from our top sellers'" />
+    <Category />
     <div class="d-flex">
         <div class="position-relative w-33" v-for="(element, index) in seasonsCollection">
             <img class="img-fluid" :src="element.img" :alt="element.title">
+            <div class="img-hover w-100 h-100"></div>
             <div class="position-absolute top-50 start-50 translate-middle text-white text-center">
                 <h2 class=" fw-bolder fs-1 m-0">{{ element.title }}</h2>
                 <p class="text-uppercase fs-5 letter-spacing py-4">{{ element.subTitle }}</p>
                 <button class="ah-button text-uppercase">view more</button>
             </div>
-        </div>       
+        </div>
     </div>
 
-    <SectionTitle :title="'Best Seller'" :subTitle="'Must have products from our top sellers'"/>
+    <SectionTitle :title="'Best Seller'" :subTitle="'Must have products from our top sellers'" />
     <div class="container">
-      <CardsComponent/>  
+        <CardsComponent />
     </div>
-    
-
 </template>
 
 <script>
@@ -35,7 +34,7 @@ export default {
         CardsComponent
     },
     data() {
-        return{
+        return {
             seasonsCollection: [
                 {
                     img: '../../public/images/winter_collection_bg.jpg',
@@ -59,19 +58,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.w-33{
+.w-33 {
     width: calc(100% / 3);
 
-    div{
+    div.position-absolute {
         width: 100%;
+    }
+
+    img {
+        backface-visibility: hidden;
+
+        &:hover .img-hover {
+            transition: .5s ease;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            text-align: center;
+        }
     }
 }
 
-h2{
+h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-.letter-spacing{
+.letter-spacing {
     letter-spacing: 5px;
 }
 </style>

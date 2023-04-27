@@ -10,8 +10,18 @@
         <div class="row mb-5">
             <div class="col-3" v-for="(card, index) in cards">
                 <div class="card border-0">
-                    <div class="card-image">
+                    <div class="card-image position-relative">
                         <img class=" img-fluid" :src="card.img" :alt="card.title">
+                        <div class="position-absolute top-50 start-50 translate-middle text-white text-center hover-effect">
+                            <div class="d-flex gap-1 align-items-center">
+                                <i class="fa-solid fa-cart-shopping small"></i>
+                                <span class="small">Add to cart</span>
+                            </div>
+                            <div class="d-flex gap-1 align-items-center">
+                                <i class="fa-solid fa-list-ul small"></i>
+                                <span class="small">Details</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <p class="fw-bolder">{{ card.title }}</p>
@@ -69,10 +79,26 @@ ul {
     p {
         cursor: pointer;
         transition: color 0.5s;
+
         &:hover {
             color: var(--blue);
         }
     }
 
+}
+
+.card-image {
+    transition: display 0.5s;
+    cursor: pointer;
+}
+
+.card-image:hover {
+
+    .hover-effect {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
 </style>

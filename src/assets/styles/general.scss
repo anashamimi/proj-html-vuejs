@@ -57,3 +57,10 @@ ul{
         background-color: transparent;
     }
 }
+
+.hover-effect {
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(255, 150, 110), rgba(80, 135, 213, 0.95));
+    display: none;
+}
