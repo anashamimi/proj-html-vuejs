@@ -30,7 +30,7 @@
                     </div>
 
                     <div
-                        class="d-flex align-items-center justify-content-center gap-2 p-3 fw-semibold bg-light ah-cart text-dark cursor">
+                        class="d-flex align-items-center justify-content-center gap-2 p-3 fw-semibold ah-cart text-dark cursor">
                         <i class="fa-solid fa-cart-shopping"></i>
                         <p>CART</p>
                     </div>
@@ -80,6 +80,7 @@ ul {
 
 .ah-cart {
     width: 200px;
+    background-color: var(--bg-white);
 }
 
 button{
