@@ -14,7 +14,8 @@
     "bootstrap": "^5.2.3",
     "sass": "^1.62.1",
     "vue": "^3.2.47",
-    "vue-carousel": "^0.18.0"
+    "vue-carousel": "^0.18.0",
+    "vue3-carousel": "^0.3.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.1.0",

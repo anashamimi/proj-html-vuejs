@@ -166,11 +166,4 @@ const categoryCards = [
 
 ];
 
-const carouselCards = [
-    {
-        img: '',
-
-    }
-]
-
 export {links , images , categories , categoryCards};

@@ -2,6 +2,7 @@
     <Carousel />
     <SectionTitle :title="'Featured Products'" :subTitle="'Must have products from our top sellers'" />
     <Category />
+
     <div class="d-flex">
         <div class="position-relative w-33" v-for="(element, index) in seasonsCollection">
             <img class="img-fluid" :src="element.img" :alt="element.title">
@@ -16,7 +17,16 @@
 
     <SectionTitle :title="'Best Seller'" :subTitle="'Must have products from our top sellers'" />
     <div class="container">
-        <CardsComponent />
+        <CardsCarousel />
+    </div>
+
+    <div class="bg-img">
+        <div class="container">
+            <div class="row ">
+                <BigImage v-for="promo in promoImage" :image="promo.url" :title="promo.title" :description="promo.description"/>
+            </div>
+        </div>
+
     </div>
 </template>
 
@@ -24,14 +34,16 @@
 import Carousel from './Carousel.vue';
 import SectionTitle from './SectionTitle.vue';
 import Category from './Category.vue';
-import CardsComponent from './CardsComponent.vue';
+import CardsCarousel from './CardsCarousel.vue';
+import BigImage from './BigImage.vue';
 export default {
     name: 'MainComponent',
     components: {
         Carousel,
         SectionTitle,
         Category,
-        CardsComponent
+        CardsCarousel,
+        BigImage
     },
     data() {
         return {
@@ -51,7 +63,20 @@ export default {
                     title: 'Autumn Collection',
                     subTitle: 'RICH AND COMFORTABLE'
                 },
-            ]
+            ],
+
+            promoImage: [
+                {
+                    url: '../../public/images/promo_box_1_bg.jpg',
+                    title: '70% Off',
+                    description: 'Vivamus tempor leo lacus, feugiatut magna aliquam erat.'
+                },
+                {
+                    url: '../../public/images/promo_box_2_bg.jpg',
+                    title: 'Free Shipping',
+                    description: 'Vivamus tempor leo lacus, feugiatut magna aliquam erat.'
+                }
+            ],
         }
     }
 }
@@ -87,5 +112,14 @@ h2 {
 
 .letter-spacing {
     letter-spacing: 5px;
+}
+
+.bg-img {
+    margin: 5rem 0;
+    background-image: url('../../public/images/bkgd_confetti-compressor.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;
 }
 </style>
