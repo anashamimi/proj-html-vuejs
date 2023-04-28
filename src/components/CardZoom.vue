@@ -1,11 +1,11 @@
 <template>
-    <div class="card col-4">
-        <div class="card-img overflow-hidden">
+    <div class="card col-4 border-0 mb-5">
+        <div class="card-img overflow-hidden rounded-0 pb-3">
             <img class="img-fluid" :src="image" :alt="title">
         </div>
-        <div class="card-body">
-            <p class="hover-blue">{{ title }}</p>
-            <p class="small">{{ date }} | <span class="hover-blue">{{ comments }} Comments</span></p>
+        <div class="card-body p-0">
+            <p class="hover-blue fw-bolder montserrat">{{ title }}</p>
+            <p class="small pb-3">{{ date }} | <span class="hover-blue">{{ comments }} Comments</span></p>
             <p>{{ description }}</p>
         </div>
     </div>

@@ -4,6 +4,7 @@ $fa-font-path: './webfonts';
 @import '@fortawesome/fontawesome-free/scss/fontawesome.scss';
 @import '@fortawesome/fontawesome-free/scss/solid.scss';
 @import '@fortawesome/fontawesome-free/scss/brands.scss';
+@import '@fortawesome/fontawesome-free/scss/regular.scss';
 
 @import 'bootstrap/scss/bootstrap';
 
@@ -64,4 +65,8 @@ ul{
     background-image: linear-gradient(to top, rgba(255, 150, 110), rgba(80, 135, 213, 0.95));
     display: none;
     transition: display 0.5s;
+}
+
+.montserrat{
+    font-family: 'Montserrat', sans-serif;
 }

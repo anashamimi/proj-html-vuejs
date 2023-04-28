@@ -17,9 +17,6 @@
 </script>
 
 <style lang="scss" scoped>
-.montserrat{
-    font-family: 'Montserrat', sans-serif;
-}
 
 .ah-width{
     width: 60%;
