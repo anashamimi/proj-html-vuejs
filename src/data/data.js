@@ -61,7 +61,8 @@ const categoryCards = [
         title: 'Black Leather Jacket',
         description: 'Men, Jackets, Jeans',
         price: '$200',
-        oldPrice: '$235'
+        oldPrice: '$235',
+        category: 'Men'
     },
 
     {
@@ -69,7 +70,8 @@ const categoryCards = [
         title: 'Black Leather Suit',
         description: 'Men, Jackets',
         price: '$176',
-        oldPrice: ''
+        oldPrice: '',
+        category: 'Men'
     },
 
     {
@@ -77,7 +79,8 @@ const categoryCards = [
         title: 'Blue Jacket & Stripe Tee',
         description: 'Jackets, Men, Suits',
         price: '$580',
-        oldPrice: ''
+        oldPrice: '',
+        category: 'Men'
     },
 
     {
@@ -85,11 +88,89 @@ const categoryCards = [
         title: 'Modern Black Leather Suit',
         description: 'Men, Jackets',
         price: '$96',
-        oldPrice: ''
+        oldPrice: '',
+        category: 'Men'
     },
 
-    
+    {
+        img: '../../public/images/spring_printed_dress.jpg',
+        title: 'Spring Printed Dress',
+        description: 'Women, Dress',
+        price: '$47',
+        oldPrice: '',
+        category: 'Women'
+    },
 
+    {
+        img: '../../public/images/modern_love_tee.jpg',
+        title: 'Modern Love Tee',
+        description: 'T-Shirts, Women',
+        price: '$68',
+        oldPrice: '',
+        category: 'Women'
+    },
+
+    {
+        img: '../../public/images/black_leather_jacket.jpg',
+        title: 'Black Jacket',
+        description: 'Jackets, Women',
+        price: '$125',
+        oldPrice: '',
+        category: 'Women'
+    },
+
+    {
+        img: '../../public/images/hipster_black_top.jpg',
+        title: 'Hipster Black Top',
+        description: 'T-Shirts, Women',
+        price: '$57',
+        oldPrice: '',
+        category: 'Women'
+    },
+
+    {
+        img: '../../public/images/casual_leather_belts.jpg',
+        title: 'Casual Leather Belts',
+        description: 'Men, Accessories',
+        price: '$65',
+        oldPrice: '',
+        category: 'Accessories'
+    },
+
+    {
+        img: '../../public/images/leather_gloves.jpg',
+        title: 'Leather Gloves',
+        description: 'Gloves, Men, Women, Accessories',
+        price: '$45',
+        oldPrice: '',
+        category: 'Accessories'
+    },
+
+    {
+        img: '../../public/images/modern_leather_boots.jpg',
+        title: 'Modern Leather Boots',
+        description: 'Men, Accessories, Miscellaneous, Shoes',
+        price: '$30',
+        oldPrice: '$50',
+        category: 'Accessories'
+    },
+
+    {
+        img: '../../public/images/brown_dress_shoes.jpg',
+        title: 'Brown Dress Shoes',
+        description: 'Accessories, Miscellaneous, Shoes, Women',
+        price: '$36',
+        oldPrice: '$46',
+        category: 'Accessories'
+    },
+
+];
+
+const carouselCards = [
+    {
+        img: '',
+
+    }
 ]
 
 export {links , images , categories , categoryCards};

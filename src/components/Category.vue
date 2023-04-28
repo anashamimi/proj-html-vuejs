@@ -2,13 +2,13 @@
     <div class="container">
         <div>
             <ul class="d-flex justify-content-center align-items-center">
-                <li v-for="(category, index) in categories" :key="index" :class="{ 'selected': category.selected }">
+                <li v-for="(category, index) in categories" :key="index" @click="selectedCategory = category.name" :class="{ 'selected': category.name === selectedCategory }" >
                     {{ category.name }}</li>
             </ul>
         </div>
 
         <div class="row mb-5">
-            <div class="col-3" v-for="(card, index) in cards">
+            <div class="col-3" v-for="(card, index) in cards" :class="{'d-none': selectedCategory != card.category}">
                 <div class="card border-0">
                     <div class="card-image position-relative">
                         <img class=" img-fluid" :src="card.img" :alt="card.title">
@@ -47,9 +47,11 @@ export default {
     data() {
         return {
             categories,
-            cards: categoryCards
+            cards: categoryCards,
+            selectedCategory: 'Men',
         }
-    }
+    },
+
 }
 </script>
 
