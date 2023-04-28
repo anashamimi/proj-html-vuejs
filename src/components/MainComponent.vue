@@ -23,10 +23,23 @@
     <div class="bg-img">
         <div class="container">
             <div class="row ">
-                <BigImage v-for="promo in promoImage" :image="promo.url" :title="promo.title" :description="promo.description"/>
+                <BigImage v-for="promo in promoImage" :image="promo.url" :title="promo.title"
+                    :description="promo.description" />
             </div>
         </div>
+    </div>
 
+    <SectionTitle :title="'New Arrivals'" :subTitle="'Brand new products from top designers'" />
+    <CardsCarousel />
+    <Testimonials v-for="testimonial in testimonials" :profile="testimonial.img" :name="testimonial.name"
+        :description="testimonial.description" />
+
+    <SectionTitle :title="'From Our Blog'" :subTitle="'The latest Classic Shop news'" />
+    <div class="container">
+        <div class="row">
+            <CardZoom v-for="post in posts" :image="post.image" :title="post.title" :description="post.description"
+            :comments="post.comments" :date="post.date"/>
+        </div>
     </div>
 </template>
 
@@ -36,6 +49,8 @@ import SectionTitle from './SectionTitle.vue';
 import Category from './Category.vue';
 import CardsCarousel from './CardsCarousel.vue';
 import BigImage from './BigImage.vue';
+import Testimonials from './Testimonials.vue';
+import CardZoom from './CardZoom.vue';
 export default {
     name: 'MainComponent',
     components: {
@@ -43,7 +58,9 @@ export default {
         SectionTitle,
         Category,
         CardsCarousel,
-        BigImage
+        BigImage,
+        Testimonials,
+        CardZoom
     },
     data() {
         return {
@@ -77,6 +94,38 @@ export default {
                     description: 'Vivamus tempor leo lacus, feugiatut magna aliquam erat.'
                 }
             ],
+
+            testimonials: [
+                {
+                    img: '../../public/images/man_testimonial.png',
+                    description: 'Curabitur non tristique tortor. Vestibulum aliquet suscipit ipsum in volutpat. Donec vel lacinia sem, vitae semper nulla. In hac habitasse platea dictumst. Mauris consectetur est et nibh sadip hendrerit bibendum.',
+                    name: 'Darío Pineda'
+                }
+            ],
+
+            posts: [
+                {
+                    image: '../../public/images/post_img_12-700x441.jpg',
+                    title: 'Aenean lobortis sapien enim viverra',
+                    date: 'September 9th, 2015',
+                    comments: 0,
+                    description: 'Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,'
+                },
+                {
+                    image: '../../public/images/post_img_11-700x441.jpg',
+                    title: 'Duis ac massa semper maximus',
+                    date: 'September 9th, 2015',
+                    comments: 0,
+                    description: 'Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,'
+                },
+                {
+                    image: '../../public/images/post_img_10-700x441.jpg',
+                    title: 'Nunc fermint nulla eu justo sem id',
+                    date: 'September 9th, 2015',
+                    comments: 0,
+                    description: 'Donec finibus sit amet orci eget ultricies. Praesent posuere ante ut erat fringilla,'
+                }
+            ]
         }
     }
 }
